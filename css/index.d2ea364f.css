@@ -1,0 +1,93 @@
+/* https://codepen.io/rendykstan/pen/VLqZGO8 */
+.range-slider {
+  opacity: 0.8;
+  position: relative;
+  width: 100%;
+  margin-left: 0px;
+  margin-bottom: 20px;
+  height: 54px;
+  float: left;
+  text-align: left;
+}
+.range-slider:hover {
+  opacity: 1;
+  /* Fully shown on mouse-over */
+}
+.range-slider input[type=range] {
+  -webkit-appearance: none;
+  height: 25px;
+  pointer-events: none;
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  height: 25px;
+  width: 100%;
+  border-radius: 0px;
+  border: none;
+  background: none;
+}
+.range-slider input[type=range]:focus, .range-slider input[type=range]:active {
+  outline: none;
+}
+.range-slider input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  box-sizing: content-box;
+  width: 25px;
+  height: 25px;
+  border: none;
+  pointer-events: auto;
+  border-radius: 0px;
+  background-color: #017bfe;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.range-slider input[type=range]::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border: none;
+  pointer-events: auto;
+  border-radius: 0px;
+  background-color: #017bfe;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.range-slider input[type=range]::-ms-thumb {
+  width: 25px;
+  height: 25px;
+  border: none;
+  pointer-events: auto;
+  border-radius: 0px;
+  background-color: #017bfe;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.range-slider input[type=range]::-webkit-slider-runnable-track {
+  /* your track styles */
+  background: #d3d3d3;
+  /* Grey background */
+}
+.range-slider input[type=range]::-moz-range-track {
+  -moz-appearance: none;
+  background: none;
+}
+.range-slider input[type=range]::-ms-track {
+  /* should come after -webkit- */
+  border-color: transparent;
+  color: transparent;
+  background: transparent;
+  /* again your track styles */
+}
+.range-slider input[type=range]::-ms-fill-upper {
+  background: transparent;
+}
+.range-slider input[type=range]::-ms-fill-lower {
+  background: transparent;
+}
+.range-slider input[type=range]::-ms-tooltip {
+  display: none;
+}
+/*# sourceMappingURL=index.d2ea364f.css.map */

@@ -1,0 +1,1 @@
+{"version":3,"sources":["itemList.css"],"names":[],"mappings":"AAAA,mBACE,cAAe,CACf,aAAc,CACd,SAAU,CACV,YACF","file":"itemList.96a31a95.css","sourceRoot":"..","sourcesContent":["#itemListContainer {\r\n  position: fixed;\r\n  overflow: auto;\r\n  width: 30%;\r\n  height: 720px;\r\n}\r\n\r\n.listItem {\r\n}\r\n"]}

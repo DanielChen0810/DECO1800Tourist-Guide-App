@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tourist Guide</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,700">
+    <!--Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/index.3ec81c3c.css">
+    <link rel="stylesheet" href="./css/index.2bdc64b7.css">
+    <link rel="stylesheet" href="./css/index.d2ea364f.css">
+    <link rel="stylesheet" href="./css/index.bc21f150.css">
+    <link rel="stylesheet" href="./css/index.f6de4f69.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="margin-left: 35%;">
+      <a class="navbar-brand" href="#">Brisbane Adventure</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="top-attractions.html">Top attrations</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="map.html">Route Arrangement</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tellus.html">Tell us</a>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#UserLogIn">Log In <i class="fas fa-sign-in-alt"></i></button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="sidebar" class="sidebar">
+      <svg id="expandBtn" class="sidebar__expand" viewbox="0 0 256 512" width="100" title="angle-right">
+      <path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path>
+      </svg>
+      <button id="radiusBtn" class="sidebar__btn btn btn-primary">
+        Radius: OFF
+      </button>
+      <div style="margin-left: 3%">You can do a search based on the distance from the attraction to the current location by clicking the button above to turn on the radius mode</div>
+      <div id="itemListContainer" class="list-group">
+        <div class="input-group">
+          <input id="searchInput" type="text" class="form-control" placeholder="Search attraction by input keywords" aria-describedby="basic-addon2">
+          <div class="input-group-append">
+            <button id="searchButton" class="btn btn-primary" type="button">
+              Submit
+            </button>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <div id="loader" class="spinner-border m-5" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <div style="margin-left: 3%; font-size: large; margin-top: 2%;">Attraction List: Select an attraction you interested and the map will show it's location</div>
+        <div id="itemList"></div>
+      </div>
+      <div id="rangeListContainer" class="list-group">
+        <div>1.Input your current location by clicking on the map</div>
+        <div id="mouseLocation">Current Point(Coordinates of the current mouse position): </div>
+        <div id="selectLocation">Selected Point: </div>
+        <div>2.Then set the size of the search radius by draging the bar below and you will find all the attraction in that area.</div>
+        <div class="range-slider">
+          <div id="rangeSliderLabel">Range :</div>
+          <input type="range" step="1" min="0" max="100" value="0" id="radiusRange">
+        </div>
+      </div>
+    </div>
+
+    <div id="map"></div>
+
+    <section id="footer" style="background-color:#343a40;
+    color: white;
+    text-align: center;
+    height: 30px;">
+      <p>© Copyright by Old People 2021<i class="far fa-dizzy"></i></p>
+    </section>
+
+    <script src="./js/index.3fafb3e2.js"></script>
+  </body>
+</html>

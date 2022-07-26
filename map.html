@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Google Maps Multiple Markers</title>
+  <script src="./js/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJYT1acSFGAAP4nQYpQ_iQb6-vAMhB784&callback=initMap&libraries=&v=weekly&channel=2"
+          type="text/javascript"></script>
+  <link rel="stylesheet" href="./css/lobibox.css"/>
+  <link rel="stylesheet" href="./css/styles.css">
+  <style>
+    *{margin: 0;padding: 0}a{text-decoration: none;color: black;}ul{list-style: none;}
+    .center_1200{width: 40%;margin-left:60%;font:"microsoft yahei";height:55px;}
+    .center_1200:after{content:"";clear: both;height: 0;display: block;}
+    .nav_ul{}
+    .nav_ul li{float: left;padding:5px 10px;position: relative;margin-left:50px;padding-top:15px;}
+    .nav_ul li .line{position: absolute;width: 0;left: 50%;bottom:-5px;height: 2px;display: block;background: gold;transition: 600ms ease-in-out;}
+    .nav_ul li:hover .line{width: 100%;left: 0;transition: 600ms ease-in-out;}
+    .nav_ul li a{transition:600ms ease-in-out;}
+    .nav_ul li a:hover{color: gold;transition:600ms ease-in-out;}
+    </style>
+</head>
+<body id="mapBody">
+  <header>
+    <div class="title"><p class="logo">Brisbane Adventure</p></div>
+    <body>
+    <div class="center_1200">
+    <ul class="nav_ul">
+    <li>
+    <a href="index.html">Home</a>
+    <span class="line"></span>
+    </li>
+    <li>
+    <a href="top-attractions.html">Top Attraction</a>
+    <span class="line"></span>
+    </li>
+    <li>
+    <a href="map.html">Route Arrangement</a>
+    <span class="line"></span>
+    </li>
+    <li>
+      <a href="tellus.html">Tell US</a>
+      <span class="line"></span>
+    </li>
+    </ul>
+    </div>
+  </header>
+  <div class="mapContainer">
+    <div id="map" style="width: 500px; height: 400px;"></div>
+    <div class="mapCard">
+      <div class="textContainer">
+        <div class="header">
+          Unknown fate -- flip the card game
+        </div>
+        <p>Hey,my friend!</p>
+        <p>I knew you may Struggle with your travel routes. So how about a random Brisbane advanture route? </p>
+        <p>Yours,</p>
+        <p>Old people</p>
+      </div>
+
+      <div class="gameContainer">
+      </div>
+    </div>
+  </div>
+  <script src="./js/lobibox.min.js"></script>
+  <script src="./js/games.js"></script>
+  <div class="footer">
+    <p>Copyright by Old People</p>
+    </div>
+</div>
+</body>
+</html>
